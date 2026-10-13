@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good/Bad Email</title>
+</head>
+<body>
+    
+    <h1>Email Validation</h1>
+
+    
+    <input type="text" id="email">
+    <div id="error"></div>
+    <button id="button">Submit</button>
+
+
+    <script>
+
+        /* Create three references */
+
+        /*Create a quick even on the button */
+
+        /*If email is invalid*/
+        /*Change border to red */
+        /*Add error message to div */
+
+        /*If email is valid*/
+        /*Change border to green */
+        /*Clear error message*/
+
+
+    var email = document.getElementById("email");
+    var button=document.getElementById("button");
+    var error=document.getElementById("error");
+        
+    button.addEventListener("click",function() {
+        
+
+
+        const emailPattern ="/^[a-zA-Z0-9. %]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
+        const errorMessage ="ERROR! Email does not compute!"
+
+
+        
+        // If email is valid
+        if(email.value.includes("@") & email.value.endsWith(".ca")) {
+        error.innerHTML="";
+        email.style.borderColor="green";
+    
+        }
+        // Else (if invalid)
+        else {
+             error.innerHTML=errorMessage;
+            email.style.borderColor="red";
+        }
+
+
+            // Change border to green
+          //  email.style.borderColor="green";
+            // Remove error message
+
+    });
+
+    </script>
+
+</body>
+</html>
